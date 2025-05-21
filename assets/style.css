@@ -1,0 +1,721 @@
+body {
+  background: #f4f6fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  color: #222;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+.admin-table th,
+.admin-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+.admin-table th {
+  background: var(--primary);
+  color: black;
+}
+.admin-actions a {
+  margin-right: 0.5rem;
+  color: var(--primary);
+}
+.admin-form {
+  background: #fff;
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+.admin-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.admin-form input,
+.admin-form select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.message {
+  color: green;
+  margin-bottom: 1rem;
+}
+
+/* Navigation Bar */
+nav.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2d3e50;
+  padding: 1rem 2rem;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 2rem;
+}
+nav.container h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+}
+nav.container ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav.container ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav.container ul li a:hover {
+  color: #ffb347;
+}
+
+/* Logout Button Style */
+nav.container .logout-btn {
+  background: #c00;
+  color: #fff !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-left: 1.5rem;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 1px 4px #0001;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+}
+nav.container .logout-btn:hover {
+  background: #ffb347;
+  color: #c00 !important;
+}
+
+/* Improved Admin Navigation Links */
+.admin-nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 2.5rem 0;
+}
+.admin-nav ul li {
+  margin: 0;
+  padding: 0;
+}
+.admin-nav ul li a {
+  display: block;
+  background: linear-gradient(90deg, #2d3e50 60%, #ffb347 100%);
+  color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.08rem;
+  text-align: center;
+  box-shadow: 0 2px 8px #0001;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.admin-nav ul li a:hover {
+  background: linear-gradient(90deg, #ffb347 60%, #2d3e50 100%);
+  color: #222;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.dashboard-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 2rem 1.5rem;
+  flex: 1 1 250px;
+  min-width: 220px;
+  max-width: 320px;
+  transition: box-shadow 0.2s;
+}
+.dashboard-card:hover {
+  box-shadow: 0 4px 16px #0002;
+}
+.dashboard-card h2 {
+  margin-top: 0;
+  color: #2d3e50;
+  font-size: 1.3rem;
+}
+.dashboard-card p {
+  color: #555;
+}
+
+/* Public Cards Layout */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1.5rem 1.2rem;
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1 1 250px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.card:hover {
+  box-shadow: 0 4px 16px #0002;
+  transform: translateY(-4px) scale(1.02);
+}
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3e50;
+  font-size: 1.15rem;
+}
+.card p {
+  color: #555;
+  margin: 0.2rem 0;
+  font-size: 0.98rem;
+}
+
+/* Section and Heading Styles */
+section.container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+section.container h2 {
+  color: #2d3e50;
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+/* General Button Styles */
+button, .btn {
+  background: #2d3e50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: #ffb347;
+  color: #222;
+}
+
+/* General Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.6rem 0.5rem;
+  text-align: left;
+}
+table th {
+  background: #2d3e50;
+  color: #fff;
+}
+
+/* General Form Styles */
+form {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+form input, form select, form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Calendar Table Styles */
+table.calendar {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+table.calendar th, table.calendar td {
+  width: 14.28%;
+  height: 70px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem 0.4rem 0.2rem 0.6rem;
+  font-size: 1rem;
+  background: #f9fafb;
+}
+table.calendar th {
+  background: #2d3e50;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+}
+table.calendar td {
+  position: relative;
+  background: #f9fafb;
+  transition: background 0.2s;
+}
+table.calendar td:hover {
+  background: #e3f2fd;
+}
+table.calendar td div {
+  margin-top: 0.3rem;
+  background: #e3f2fd;
+  color: #1a237e;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.93em;
+  font-weight: 500;
+  box-shadow: 0 1px 2px #0001;
+}
+
+/* Contact Form Group */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Message Success/Error */
+.message {
+  color: green;
+  background: #eafbe7;
+  border: 1px solid #b6e2b3;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.error {
+  color: #c00;
+  background: #ffeaea;
+  border: 1px solid #f5bcbc;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* Enhanced Login Page Styles */
+body.login-page {
+  background: linear-gradient(120deg, #2d3e50 0%, #ffb347 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-box {
+  background: #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px #0002, 0 1.5px 6px #0001;
+  min-width: 200px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: loginFadeIn 0.7s cubic-bezier(.4,1.4,.6,1) 1;
+}
+@keyframes loginFadeIn {
+  from { opacity: 0; transform: translateY(40px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  color: #2d3e50;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.login-box form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 95%;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 1.13rem;
+  background: #f7f7fa;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 1.5px 6px #0001;
+  margin-bottom: 0.7rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #2d3e50;
+  letter-spacing: 0.5px;
+}
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+  border: 2px solid #ffb347;
+  outline: none;
+  background: #fffbe7;
+  box-shadow: 0 2px 12px #ffb34733;
+}
+.login-box input[type="text"]::placeholder,
+.login-box input[type="password"]::placeholder {
+  color: #888;
+  font-size: 1.08rem;
+  opacity: 1;
+  font-style: italic;
+}
+.login-box button[type="submit"] {
+  background: linear-gradient(90deg, #2d3e50 60%, #ffb347 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #0001;
+}
+.login-box button[type="submit"]:hover {
+  background: linear-gradient(90deg, #ffb347 60%, #2d3e50 100%);
+  color: #222;
+  box-shadow: 0 2px 12px #ffb34744;
+}
+.login-box .error {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.05rem;
+  border-radius: 6px;
+  background: #ffeaea;
+  color: #c00;
+  border: 1px solid #f5bcbc;
+  padding: 0.7rem 1rem;
+  font-weight: 500;
+}
+.login-box .login-hint {
+  color: #888;
+  font-size: 0.98rem;
+  margin-top: 1.2rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .login-box {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    min-width: unset;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: linear-gradient(120deg, #2d3e50 0%, #ffb347 100%);
+  color: #fff;
+  padding: 70px 0 60px 0;
+  text-align: center;
+  overflow: hidden;
+}
+.hero-overlay {
+  background: rgba(45,62,80,0.72);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+.hero-text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.hero-subtitle {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.7rem;
+  color: #ffb347;
+  font-weight: 600;
+}
+.hero-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+.hero-description {
+  font-size: 1.18rem;
+  margin-bottom: 1.5rem;
+  color: #fffbe7;
+}
+.cta-button {
+  margin-top: 1.2rem;
+}
+.cta-link {
+  background: linear-gradient(90deg, #ffb347 60%, #2d3e50 100%);
+  color: #222;
+  padding: 0.9rem 2.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #0001;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.cta-link:hover {
+  background: linear-gradient(90deg, #2d3e50 60%, #ffb347 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Features Section */
+.features-section {
+  background: #f4f6fa;
+  padding: 50px 0 30px 0;
+}
+.features-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.features-grid {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.feature-card:hover {
+  box-shadow: 0 6px 24px #ffb34733;
+  transform: translateY(-4px) scale(1.03);
+}
+.feature-icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+.feature-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3e50;
+  font-size: 1.18rem;
+}
+.feature-content p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Metrics Section */
+.metrics {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin: 2.5rem 0 1.5rem 0;
+  flex-wrap: wrap;
+}
+.metric {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1.5rem 2.2rem;
+  min-width: 140px;
+  text-align: center;
+}
+.metric h3 {
+  color: #ffb347;
+  font-size: 2.1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 800;
+}
+.metric p {
+  color: #2d3e50;
+  font-size: 1.08rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .features-grid, .metrics {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+/* Responsive for admin tables */
+@media (max-width: 700px) {
+  .admin-table,
+  .admin-table thead,
+  .admin-table tbody,
+  .admin-table th,
+  .admin-table td,
+  .admin-table tr {
+    display: block;
+  }
+  .admin-table tr {
+    margin-bottom: 1rem;
+  }
+  .admin-table td,
+  .admin-table th {
+    border: none;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Responsive for dashboard cards */
+@media (max-width: 900px) {
+  .dashboard-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* Responsive for calendar */
+@media (max-width: 700px) {
+  table.calendar th, table.calendar td {
+    font-size: 0.95rem;
+    height: 45px;
+    padding: 0.3rem 0.2rem 0.1rem 0.3rem;
+  }
+}
+
+/* Gallery with images on index page */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+.card-with-image {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  overflow: hidden;
+  min-width: 240px;
+  max-width: 320px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card-with-image:hover {
+  box-shadow: 0 6px 24px #ffb34733;
+  transform: translateY(-4px) scale(1.03);
+}
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background: #f4f6fa;
+}
+.card-content {
+  padding: 1.1rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card-content h3 {
+  margin: 0 0 0.3rem 0;
+  color: #2d3e50;
+  font-size: 1.13rem;
+}
+.card-content p {
+  color: #555;
+  margin: 0.1rem 0;
+  font-size: 0.98rem;
+}
+@media (max-width: 900px) {
+  .gallery {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
