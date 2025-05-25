@@ -67,7 +67,7 @@ $formateurs = $pdo->query('SELECT * FROM formateur')->fetchAll(PDO::FETCH_ASSOC)
             <label for="description">Description :</label>
             <input type="text" name="description" id="description">
             <label for="photo">Photo (URL ou nom de fichier) :</label>
-            <input type="text" name="photo" id="photo">
+            <input type="file" name="photo" id="photo">
             <button type="submit">Ajouter</button>
         </form>
         <h3>Liste des formateurs</h3>
@@ -89,7 +89,7 @@ $formateurs = $pdo->query('SELECT * FROM formateur')->fetchAll(PDO::FETCH_ASSOC)
                         <td><?= htmlspecialchars($f['firstName']) ?></td>
                         <td><?= htmlspecialchars($f['lastName']) ?></td>
                         <td><?= htmlspecialchars($f['description']) ?></td>
-                        <td><?= htmlspecialchars($f['photo']) ?></td>
+                        <td><img src=<?= htmlspecialchars($f['photo']) ?> alt="" srcset=""></td>
                         <td class="admin-actions">
                             <a href="?action=delete&id=<?= $f['id'] ?>" onclick="return confirm('Supprimer ce formateur ?');">Supprimer</a>
                         </td>

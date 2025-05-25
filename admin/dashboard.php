@@ -1,6 +1,17 @@
 <?php
 include '../includes/db.php';
+// session_start();
+// if (isset($_SESSION['user'])) {
+//     if ($_SESSION['role'] === 'admin') { // Assuming 'role' is stored in session
+//         echo "Admin is connected";
+//     } else {
+//         echo "User is connected";
+//     }
+// } else {
+//     header('location: index.php');
+// }
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
